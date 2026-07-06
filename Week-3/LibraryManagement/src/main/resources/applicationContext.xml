@@ -2,18 +2,47 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="
        http://www.springframework.org/schema/beans
-       https://www.springframework.org/schema/beans/spring-beans.xsd">
+       https://www.springframework.org/schema/beans/spring-beans.xsd
 
-    <bean id="bookRepository" class="com.div.repository.BookRepository"/>
+       http://www.springframework.org/schema/aop
+       https://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <bean id="bookService" class="com.div.service.BookService">
+    <bean id="bookRepository"
+          class="com.div.repository.BookRepository"/>
 
-        <constructor-arg ref="bookRepository"/>
+    <bean id="bookService"
+          class="com.div.service.BookService">
 
-        <property name="bookRepository" ref="bookRepository"/>
+        <property name="bookRepository"
+                  ref="bookRepository"/>
 
     </bean>
+
+    <bean id="loggingAspect"
+          class="com.div.aspect.LoggingAspect"/>
+
+    <aop:aspectj-autoproxy/>
+
+    <aop:config>
+
+        <aop:aspect ref="loggingAspect">
+
+            <aop:pointcut id="serviceMethods"
+                          expression="execution(* com.div.service.*.*(..))"/>
+
+            <aop:before
+                    method="beforeMethod"
+                    pointcut-ref="serviceMethods"/>
+
+            <aop:after
+                    method="afterMethod"
+                    pointcut-ref="serviceMethods"/>
+
+        </aop:aspect>
+
+    </aop:config>
 
 </beans>

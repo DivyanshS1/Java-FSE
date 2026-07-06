@@ -4,20 +4,11 @@ import org.aspectj.lang.ProceedingJoinPoint;
 
 public class LoggingAspect {
 
-    public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
+    public void beforeMethod() {
+        System.out.println("===== Logging Before Method Execution =====");
+    }
 
-        long start = System.currentTimeMillis();
-
-        Object result = joinPoint.proceed();
-
-        long end = System.currentTimeMillis();
-
-        System.out.println(
-                joinPoint.getSignature().getName()
-                        + " executed in "
-                        + (end - start)
-                        + " ms");
-
-        return result;
+    public void afterMethod() {
+        System.out.println("===== Logging After Method Execution =====");
     }
 }
