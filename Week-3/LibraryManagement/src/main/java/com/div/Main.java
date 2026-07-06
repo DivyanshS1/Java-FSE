@@ -6,9 +6,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        BookService service = context.getBean("bookService", BookService.class);
-        service.showBooks();
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        BookService service =
+                context.getBean("bookService", BookService.class);
+
+        service.displayBooks();
+
         ((ClassPathXmlApplicationContext) context).close();
     }
 }
