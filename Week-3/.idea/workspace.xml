@@ -5,14 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23a26531-e0a6-4788-8651-a88742898ea7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/LibraryManagementInitializer/src/main/java/com/library/LibraryManagementInitializer/LibraryManagementInitializerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryManagementInitializer/src/main/java/com/library/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryManagementInitializer/src/main/java/com/library/entity/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryManagementInitializer/src/main/java/com/library/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibraryManagement/src/main/java/com/div/aspect/LoggingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryManagement/src/main/java/com/div/aspect/LoggingAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibraryManagement/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryManagement/src/main/resources/applicationContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -27,6 +39,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.LibraryManagementApplication.executor": "Run",
+    "Application.LibraryManagementInitializerApplication.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
