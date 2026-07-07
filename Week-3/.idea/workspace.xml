@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a26531-e0a6-4788-8651-a88742898ea7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/LibraryManagementInitializer/src/main/java/com/library/LibraryManagementInitializer/LibraryManagementInitializerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryManagementInitializer/src/main/java/com/library/controller/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryManagementInitializer/src/main/java/com/library/entity/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryManagementInitializer/src/main/java/com/library/repository/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="23a26531-e0a6-4788-8651-a88742898ea7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
