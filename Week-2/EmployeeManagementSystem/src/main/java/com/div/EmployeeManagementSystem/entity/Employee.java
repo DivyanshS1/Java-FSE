@@ -1,8 +1,16 @@
 package com.div.EmployeeManagementSystem.entity;
 
 import jakarta.persistence.*;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import java.time.LocalDateTime;
 
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 @Table(name = "employees")
 @NamedQueries({
         @NamedQuery(
@@ -21,13 +29,23 @@ public class Employee {
     private Long id;
 
     private String name;
-
     private String email;
 
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
 
+    @CreatedBy
+    private String createdBy;
+
+    @LastModifiedBy
+    private String lastModifiedBy;
+
+    @CreatedDate
+    private LocalDateTime createdDate;
+
+    @LastModifiedDate
+    private LocalDateTime lastModifiedDate;
     public Employee() {
     }
 
