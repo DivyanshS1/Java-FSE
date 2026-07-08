@@ -2,7 +2,7 @@ package com.cognizant.spring_learn;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -21,8 +21,9 @@ public class SpringLearnApplication {
 		SpringApplication.run(SpringLearnApplication.class, args);
 
 		displayDate();
+//		displayCountry();
+		displayCountries();
 
-		displayCountry();
 	}
 
 	public static void displayDate() {
@@ -68,6 +69,22 @@ public class SpringLearnApplication {
 		LOGGER.debug("Another Country : {}", anotherCountry);
 
 		LOGGER.debug("Same Object : {}", country == anotherCountry);
+
+		LOGGER.info("END");
+
+	}
+	@SuppressWarnings("unchecked")
+	public static void displayCountries() {
+
+		LOGGER.info("START");
+
+		ApplicationContext context =
+				new ClassPathXmlApplicationContext("country.xml");
+
+		List<Country> countryList =
+				(List<Country>) context.getBean("countryList");
+
+		LOGGER.debug("Country List : {}", countryList);
 
 		LOGGER.info("END");
 
