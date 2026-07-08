@@ -21,6 +21,8 @@ public class SpringLearnApplication {
 		SpringApplication.run(SpringLearnApplication.class, args);
 
 		displayDate();
+
+		displayCountry();
 	}
 
 	public static void displayDate() {
@@ -37,13 +39,29 @@ public class SpringLearnApplication {
 
 			Date date = format.parse("31/12/2018");
 
-			LOGGER.debug("Parsed Date : {}", date);
+			LOGGER.debug("Date : {}", date);
 
 		} catch (Exception e) {
 
-			LOGGER.error("Exception occurred while parsing date", e);
+			LOGGER.error("Exception", e);
 
 		}
+
+		LOGGER.info("END");
+
+	}
+
+	public static void displayCountry() {
+
+		LOGGER.info("START");
+
+		ApplicationContext context =
+				new ClassPathXmlApplicationContext("country.xml");
+
+		Country country =
+				context.getBean("country", Country.class);
+
+		LOGGER.debug("Country : {}", country);
 
 		LOGGER.info("END");
 
