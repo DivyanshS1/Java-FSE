@@ -61,10 +61,15 @@ public class SpringLearnApplication {
 		Country country =
 				context.getBean("country", Country.class);
 
+		Country anotherCountry =
+				context.getBean("country", Country.class);
+
 		LOGGER.debug("Country : {}", country);
+		LOGGER.debug("Another Country : {}", anotherCountry);
+
+		LOGGER.debug("Same Object : {}", country == anotherCountry);
 
 		LOGGER.info("END");
 
 	}
-
 }
